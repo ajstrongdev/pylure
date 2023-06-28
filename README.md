@@ -20,7 +20,9 @@ PyLure is built ontop of TkInter, meaning it is a truly cross-platform native ap
 
 Dependencies (apt & pip):
 
-* python3-tk python3-pip tkterminal
+`apt-get install -y python3-pip python3-tk`
+
+`pip install tkterminal`
 
 ```
 git clone https://github.com/ajstrongdev/pylure.git
@@ -30,7 +32,7 @@ bash install.sh
 
 # Screenshots
 
-![PyLure Screenshot](https://github.com/ajstrongdev/pylure/blob/main/extras/pylure.png?raw=true)
+![PyLure Screenshot](https://github.com/ajstrongdev/pylure/blob/main/extras/screenshot.png?raw=true)
 
 # Roadmap
 
