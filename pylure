@@ -6,17 +6,47 @@ from tkinter import messagebox
 from idlelib.percolator import Percolator
 from idlelib.colorizer import ColorDelegator
 from tkterminal import Terminal
+import io
+from io import *
+import getpass
 
-# Theming
-color_menu = '#1D1E26'
-color_editor = '#282a36'
-color_text = '#f8f8f2'
-color_comment = '#6272a4'
-color_keyword = '#bd93f9'
-color_string = '#50fa7b'
-color_builtin = '#FF9670'
-color_definition = '#ffb86c'
-color_terminal = '#343746'
+user = getpass.getuser()
+
+try:
+    osconf = open(f'/home/{user}/.config/pylure/os.conf','r')
+except FileNotFoundError:
+    # Theming for Windows (Custom themes not yet supported)
+    color_menu = '#1D1E26'
+    color_editor = '#282a36'
+    color_text = '#f8f8f2'
+    color_comment = '#6272a4'
+    color_keyword = '#bd93f9'
+    color_string = '#50fa7b'
+    color_builtin = '#FF9670'
+    color_definition = '#ffb86c'
+    color_terminal = '#343746'
+else:
+    # Theming for Linux
+    menuconf = open(f'/home/{user}/.config/pylure/theming/menu.conf','r')
+    editorconf = open(f'/home/{user}/.config/pylure/theming/editor.conf','r')
+    textconf = open(f'/home/{user}/.config/pylure/theming/text.conf','r')
+    commentconf = open(f'/home/{user}/.config/pylure/theming/comment.conf','r')
+    keywordconf = open(f'/home/{user}/.config/pylure/theming/keyword.conf','r')
+    stringconf = open(f'/home/{user}/.config/pylure/theming/string.conf','r')
+    builtinconf = open(f'/home/{user}/.config/pylure/theming/builtin.conf','r')
+    definitionconf = open(f'/home/{user}/.config/pylure/theming/definition.conf','r')
+    terminalconf = open(f'/home/{user}/.config/pylure/theming/terminal.conf','r')
+    
+    color_menu = menuconf.readline(7)
+    color_editor = editorconf.readline(7)
+    color_text = textconf.readline(7)
+    color_comment = commentconf.readline(7)
+    color_keyword = keywordconf.readline(7)
+    color_string = stringconf.readline(7)
+    color_builtin = builtinconf.readline(7)
+    color_definition = definitionconf.readline(7)
+    color_terminal = terminalconf.readline(7)
+
 
 class Menubar:
 

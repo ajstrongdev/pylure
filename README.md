@@ -26,8 +26,8 @@ Dependencies (apt & pip):
 
 ```
 git clone https://github.com/ajstrongdev/pylure.git
-cd pylure/
-bash install.sh
+cd pylure/installers
+bash ubuntu-install.sh
 ```
 
 # Screenshots
