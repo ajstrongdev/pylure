@@ -36,6 +36,12 @@ bash ubuntu-install.sh
 
 ![PyLure Screenshot](https://github.com/ajstrongdev/pylure/blob/main/extras/screenshot.png?raw=true)
 
+# Theming
+
+**Linux:**
+
+Configuration files for theming PyLure on Linux are stored in `~/.config/pylure/theming`, there you will find configuration files with HTML colour codes that you can edit as you need.
+
 # Roadmap
 
 - [x] Create a working text editor
