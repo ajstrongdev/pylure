@@ -20,9 +20,11 @@ PyLure is built ontop of TkInter, meaning it is a truly cross-platform native ap
 
 Dependencies (apt & pip):
 
-`apt-get install -y python3-pip python3-tk`
+`apt-get install -y python3-pip python3-tk idle3`
 
 `pip install tkterminal`
+
+* On Ubuntu 23.04 and higher you need to run `pip install tkterminal --break-system-packages` to have it install correctly.
 
 ```
 git clone https://github.com/ajstrongdev/pylure.git
@@ -36,9 +38,17 @@ bash ubuntu-install.sh
 
 # Roadmap
 
-- [*] Create a working text editor
-- [*] Add syntax highlighting
-- [*] Add an integrated terminal
+- [x] Create a working text editor
+- [x] Add syntax highlighting
+- [x] Add an integrated terminal
 - [ ] Add theming
+    - [x] Add theming on Linux
+    - [ ] Add theming on macOS
+    - [ ] Add theming on Windows
+    - [ ] Add a theming GUI, with preinstalled light and dark themes.
 - [ ] Add directory browsing
 - [ ] Add tabs of open files 
+- [ ] Binary Creation
+    - [ ] Create binaries for Linux
+    - [ ] Create binaries for macOS
+    - [ ] Create binaries for Windows
